@@ -4,6 +4,11 @@ This is a Javascript Google Maps extension for the GPolygon class to detect whet
 
 Simplest Usage:
 
-var coordinate = new GLatLng(40, -90);
-var polygon = new GPolygon([], "#000000", 1, 1, "#336699", 0.3);
+var coordinate = new google.maps.LatLng(40, -90);
+var polygon = new google.maps.Polygon([..paths..], "#000000", 1, 1, "#336699", 0.3);
 var isWithinPolygon = polygon.containsLatLng(coordinate);
+
+Or if you have a Marker
+
+
+var isWithinPolygon = polygon.containsLatLng(marker.getPosition());
