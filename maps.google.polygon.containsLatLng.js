@@ -26,8 +26,7 @@ if (!google.maps.Polygon.prototype.getBounds)
 
 
 
-
-GPolygon.prototype.containsLatLng = function(latLng) {
+google.maps.Polygon.prototype.containsLatLng = function(latLng) {
 	// Exclude points outside of bounds as there is no way they are in the poly
 	var bounds = this.getBounds();
 	
